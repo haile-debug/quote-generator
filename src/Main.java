@@ -3,14 +3,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Quotes the program can choose from.
-        String[] quotes = {
-                "Small steps every day lead to progress.",
-                "You don't need to know everything to get started.",
-                "Every mistake is a chance to learn.",
-                "Practice helps you improve.",
-                "Everyone starts somewhere."
-        };
+        // Get the quotes from the QuoteCategories class.
+        String[] quotes = QuoteCategories.getStudyQuotes();
 
         Random random = new Random();
 
