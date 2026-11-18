@@ -13,6 +13,9 @@ public class Main {
 
         // Automatically close the scanner when finished.
         try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Choose a category:");
+            System.out.println("1. Motivation");
+            System.out.println("2. Studying");
             while (true) {
                 previousIndex = printRandomQuote(
                         quotes, random, previousIndex
