@@ -16,6 +16,13 @@ public class Main {
             System.out.println("Choose a category:");
             System.out.println("1. Motivation");
             System.out.println("2. Studying");
+            String category = scanner.nextLine().trim();
+            if (category.equals("1")) {
+                quotes = QuoteCategories.getMotivationQuotes();
+            } else if (category.equals("2")) {
+                quotes = QuoteCategories.getStudyQuotes();
+            }
+
             while (true) {
                 previousIndex = printRandomQuote(
                         quotes, random, previousIndex
