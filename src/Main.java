@@ -17,9 +17,16 @@ public class Main {
             System.out.println("1. Motivation");
             System.out.println("2. Studying");
             String category = scanner.nextLine().trim();
+
+// Keep asking until the user enters a valid category.
+            while (!category.equals("1") && !category.equals("2")) {
+                System.out.println("Invalid choice. Please enter 1 or 2.");
+                category = scanner.nextLine().trim();
+            }
+
             if (category.equals("1")) {
                 quotes = QuoteCategories.getMotivationQuotes();
-            } else if (category.equals("2")) {
+            } else {
                 quotes = QuoteCategories.getStudyQuotes();
             }
 
