@@ -36,7 +36,7 @@ public class Main {
                 );
 
                 System.out.println(
-                        "Press Enter for another quote, or type q to quit."
+                        "Press Enter for another quote, c to change category, or q to quit."
                 );
 
                 // Stop if no more input is available.
@@ -46,6 +46,12 @@ public class Main {
 
                 // Remove extra spaces from the user's input.
                 String answer = scanner.nextLine().trim();
+
+                // Let the user choose a different category.
+                if (answer.equalsIgnoreCase("c")) {
+                    quotes = chooseCategory(scanner);
+                    previousIndex = -1;
+                }
 
                 // Accept both lowercase q and uppercase Q to quit.
                 if (answer.equalsIgnoreCase("q")) {
