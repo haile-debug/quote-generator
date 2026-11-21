@@ -73,4 +73,23 @@ public class Main {
         // Return the index so the next call can avoid repeating it.
         return index;
     }
+    public static String[] chooseCategory(Scanner scanner) {
+        System.out.println("Choose a category:");
+        System.out.println("1. Motivation");
+        System.out.println("2. Studying");
+
+        String category = scanner.nextLine().trim();
+
+        // Keep asking until the user enters a valid category.
+        while (!category.equals("1") && !category.equals("2")) {
+            System.out.println("Invalid choice. Please enter 1 or 2.");
+            category = scanner.nextLine().trim();
+        }
+
+        if (category.equals("1")) {
+            return QuoteCategories.getMotivationQuotes();
+        } else {
+            return QuoteCategories.getStudyQuotes();
+        }
+    }
 }
