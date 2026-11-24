@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,6 +8,8 @@ public class Main {
         String[] quotes = QuoteCategories.getStudyQuotes();
 
         Random random = new Random();
+        // Store favourite quotes during the current session.
+        ArrayList<String> favorites = new ArrayList<>();
 
         // -1 means no quote has been shown yet.
         int previousIndex = -1;
