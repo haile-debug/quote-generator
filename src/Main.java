@@ -39,7 +39,8 @@ public class Main {
                 );
 
                 System.out.println(
-                        "Press Enter for another quote, c to change category, or q to quit."
+                        "Press Enter for another quote, f to save a favourite, "
+                                + "c to change category, or q to quit."
                 );
 
                 // Stop if no more input is available.
@@ -49,6 +50,14 @@ public class Main {
 
                 // Remove extra spaces from the user's input.
                 String answer = scanner.nextLine().trim();
+                // Save the quote currently displayed.
+                if (answer.equalsIgnoreCase("f")) {
+                    favorites.add(quotes[previousIndex]);
+                    System.out.println("Quote saved to favourites!");
+                }
+
+
+
 
                 // Let the user choose a different category.
                 if (answer.equalsIgnoreCase("c")) {
