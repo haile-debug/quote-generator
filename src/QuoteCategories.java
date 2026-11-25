@@ -1,8 +1,8 @@
 public class QuoteCategories {
 
-
-    // Return the quotes the program can choose from.
-    public static String[] getMotivationQuotes() {        return new String[] {
+    // Return quotes from the motivation category.
+    public static String[] getMotivationQuotes() {
+        return new String[] {
                 "Small steps every day lead to progress.",
                 "You don't need to know everything to get started.",
                 "Every mistake is a chance to learn.",
@@ -10,6 +10,7 @@ public class QuoteCategories {
                 "Everyone starts somewhere."
         };
     }
+
     // Return quotes from the studying category.
     public static String[] getStudyQuotes() {
         return new String[] {
