@@ -36,8 +36,16 @@ public class Main {
 
                 if (answer.equalsIgnoreCase("f")) {
                     // Save the quote currently displayed.
-                    favorites.add(quotes[previousIndex]);
-                    System.out.println("Quote saved to favourites!");
+                    String currentQuote = quotes[previousIndex];
+
+// Only save the quote if it is not already a favourite.
+                    if (!favorites.contains(currentQuote)) {
+                        favorites.add(currentQuote);
+                        System.out.println("Quote saved to favourites!");
+                    } else {
+                        System.out.println("This quote is already in your favourites.");
+                    }
+
 
                 } else if (answer.equalsIgnoreCase("v")) {
                     // Display saved favourite quotes.
